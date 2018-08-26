@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * @创建人 thomas_liu
  * @创建时间 2018/8/26 22:23
- * @描述 电影网站实体类
+ * @描述 电影网站实体类  
  */
 @Entity
 @Table(name = "t_website")
