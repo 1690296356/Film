@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://112.74.78.121:3306/db_film
+    username: root
+    password: tho12112406mas
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  thymeleaf:
+    cache: false
+
+imageFilePath: C:/IDEAHouse/Film/src/main/resources/staticfilmImage/
