@@ -1,22 +1,21 @@
-package com.thomas.film.controller;
+package com.thomas.film.conf;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * @创建人 thomas_liu
- * @创建时间 2018/8/27 0:27
- * @描述 根路径以及其他请求处理
+ * @创建时间 2018/8/28 0:35
+ * @描述 静态资源文件配置
  */
-@Controller
-public class IndexController {
+@SuppressWarnings("deprecation")
+@Configuration
+public class StaticResourceConfig  extends WebMvcConfigurerAdapter {
     // ===========================================================
     // Constants
     // ===========================================================
-    private static Logger LOG = LoggerFactory.getLogger(IndexController.class);
+
 
     // ===========================================================
     // Fields
@@ -39,37 +38,10 @@ public class IndexController {
     // ===========================================================
     // Methods
     // ===========================================================
-    /**
-     * 网页根目录请求
-     * @return mav
-     */
-    @RequestMapping("/")
-    public ModelAndView root(){
-        ModelAndView mav = new ModelAndView();
-        mav.addObject("title","首页");
-        mav.setViewName("index");
-        return mav;
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
-
-    /**
-     * 登录请求
-     * @return str
-     */
-    @RequestMapping("/login")
-    public String login(){
-        LOG.info( "login [{}]",true);
-        return "/login";
-    }
-
-    /**
-     * 进入后台管理请求
-     * @return str
-     */
-    @RequestMapping("/admin")
-    public String toAdmin(){
-        return "/admin/main";
-    }
-
     // ===========================================================
     // Inner and Anonymous Classes
     // ===========================================================

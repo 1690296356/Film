@@ -15,5 +15,7 @@ spring:
 
   thymeleaf:
     cache: false
+#  mvc:
+#    static-path-pattern: /static/**
 
 imageFilePath: C:/IDEAHouse/Film/src/main/resources/staticfilmImage/
