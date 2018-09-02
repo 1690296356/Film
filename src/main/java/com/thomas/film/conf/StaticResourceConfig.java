@@ -1,7 +1,5 @@
 package com.thomas.film.conf;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -10,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @描述 静态资源文件配置
  */
 @SuppressWarnings("deprecation")
-@Configuration
+//@Configuration
 public class StaticResourceConfig  extends WebMvcConfigurerAdapter {
     // ===========================================================
     // Constants
@@ -38,10 +36,10 @@ public class StaticResourceConfig  extends WebMvcConfigurerAdapter {
     // ===========================================================
     // Methods
     // ===========================================================
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-    }
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+//    }
     // ===========================================================
     // Inner and Anonymous Classes
     // ===========================================================
