@@ -70,6 +70,15 @@ public class IndexController {
         return "/admin/main";
     }
 
+    /**
+     * 进入添加电影页面
+     * @return str
+     */
+    @RequestMapping("/add/film")
+    public String addFilm(){
+        return "/admin/addFilm";
+    }
+
     // ===========================================================
     // Inner and Anonymous Classes
     // ===========================================================

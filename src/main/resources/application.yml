@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://112.74.78.121:3306/db_film
     username: root
-    password: tho12112406mas
+    password: 
 
   jpa:
     hibernate:
@@ -17,5 +17,8 @@ spring:
     cache: false
   mvc:
     static-path-pattern: /static/**
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
 
-imageFilePath: C:/IDEAHouse/Film/src/main/resources/staticfilmImage/
+imageFilePath: C://IDEAHouse/Film/src/main/resources/static/filmImage/
