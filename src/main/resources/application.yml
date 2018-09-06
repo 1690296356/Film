@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://112.74.78.121:3306/db_film
     username: root
-    password: 
+    password:
 
   jpa:
     hibernate:
