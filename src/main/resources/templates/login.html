@@ -7,24 +7,6 @@
   <link href="/static/login/css/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css"></link>
   <!-- CSS -->
   <link href="/static/login/css/app.min.1.css" rel="stylesheet" type="text/css"></link>
-  <script type="text/javascript">
-  
-    function submitData(){
-    	var username=$("#username").val();
-    	var password=$("#password").val();
-    	if(username==""){
-    		alert("请输入用户名！");
-    		return;
-    	}
-    	if(password==""){
-    		alert("请输入密码！");
-    		return;
-    	}
-    	document.getElementById("fm").submit();
-    }
-  
-  	
-  </script>
  </head>
  <body class="login-content" data-ng-controller="loginCtrl as lctrl">
 	    <div class="lc-block" id="l-login" data-ng-class="{'toggled':lctrl.login === 1}">
@@ -90,4 +72,7 @@
 	
 	<!-- Template Modules -->
 	<script src="/static/login/js/modules/form.js"></script>
+
+ 	<script src="/static/js/login.js"></script>
+
 </html>

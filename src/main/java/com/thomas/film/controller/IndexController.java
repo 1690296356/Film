@@ -76,7 +76,7 @@ public class IndexController {
      */
     @RequestMapping("/add/film")
     public String addFilm(){
-        return "/admin/addFilm";
+        return "/admin/add-film";
     }
 
     // ===========================================================
